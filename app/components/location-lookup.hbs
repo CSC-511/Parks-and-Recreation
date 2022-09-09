@@ -1,0 +1,17 @@
+{{yield}}
+
+
+<div class="location-lookup">
+
+    <p id="message">{{message}}</p>
+    <div>
+        <p local-class="label">Address: {{model.address}}</p>
+        <div class="test-place-autocomplete-container" data-google-auto={{googleAuto}}>
+            <PlaceAutocompleteField @inputClass="input place-autocomplete--input input-field-example"
+                @onBlurCallback={{@onSubmitAddress}} @placeChangedCallback={{@placeChanged}}
+                @placeholder="Enter an address" @preventSubmit={{true}} />
+        </div>
+        <button onclick={{@onSubmitAddress}}>Submit</button>
+    </div>
+
+</div>

@@ -1,0 +1,17 @@
+.label {
+  white-space: nowrap;
+}
+
+.twitter-share-button {
+  background-color: #3e9ad3;
+  color: white;
+  font-weight: 500;
+  padding: 4px 10px 4px 9px;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.twitter-share-button:hover {
+  background-color: #88ccf7;
+}

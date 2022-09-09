@@ -1,0 +1,35 @@
+.drawer {
+    max-height: 50%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: silver;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .drawer .filter_option {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: .5rem;
+    color: black;
+  }
+
+.drawer button:hover {
+    color: #f1f1f1;
+  }
+  
+.drawer .closebtn {
+  position: inherit;
+  top: 0;
+  right: 0px;
+  font-size: 24px;
+}
+
+.openbtn {
+  display: flex;
+  padding: 1px, 5px;
+}

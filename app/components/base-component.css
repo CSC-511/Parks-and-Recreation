@@ -1,0 +1,27 @@
+.title-container {
+    width: 100%;
+    display: flex; 
+    justify-content: space-between; 
+    margin: auto;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    padding: 0 50px;
+    box-sizing: border-box;
+    /* color: white; */
+    z-index: 100;
+}
+
+.title-container button {
+    padding: 0;
+    color: black;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+    margin: 0;
+}
+
+.title-container button:hover {
+    text-decoration: underline;
+}

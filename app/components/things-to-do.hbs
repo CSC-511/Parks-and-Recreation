@@ -1,0 +1,19 @@
+{{yield}}
+<div local-class="things-to-do-container">
+  {{#if this.renderAThing}}
+  <button onclick={{fn this.changeIdx false}}>Go Left</button>
+  <div>
+    <div>
+      <span>{{this.currentThing.title}}</span>
+    </div>
+    <img local-class="thing-img" src={{imgUrl this.currentThing}} alt={{imgAltText this.currentThing}} />
+    {{#if this.currentThing.location}}
+    <p>Location: {{this.currentThing.location}}</p>
+    {{else}}
+    <p>Location: N/A</p>
+    {{/if}}
+    <p>{{{this.currentThing.activityDescription}}}</p>
+  </div>
+  <button onclick={{fn this.changeIdx true}}>Go Right</button>
+  {{/if}}
+</div>

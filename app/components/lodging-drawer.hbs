@@ -1,0 +1,15 @@
+{{yield}}
+<div>
+    <button local-class="openbtn" style="position: inherit; right: 0px; padding: 1px 5px;" {{on "click" this.showDrawer}}>&#9776;</button>
+</div>
+<div id="drawer_nav" local-class="drawer">Filter By:
+    <button local-class="closebtn" style = "padding: 1px 5px" {{on "click" this.hideDrawer}}>×</button>
+    <div local-class="filter_option">
+        <label for="campsites">Campsites</label>
+        <input name="campsites" type="checkbox" {{on "click" (fn @update "Campsite")}} checked>
+    </div>
+    <div local-class="filter_option">
+        <label for="hotels">Hotels</label>
+        <input name="hotels" type="checkbox" {{on "click" (fn @update "Hotel")}} checked>
+    </div>
+</div>

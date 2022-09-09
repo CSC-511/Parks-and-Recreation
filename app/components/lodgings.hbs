@@ -1,0 +1,17 @@
+{{yield}}
+<div local-class="lodgings">
+    <div id="map_two" local-class="map_two"></div>
+    <div local-class="nearby_lodgings">
+        <LodgingDrawer @update={{this.updateFilters}}/>
+        {{#if this.showCampsites}}
+            {{#each this.camp_lodges as |lodging index|}}
+                <LodgingInfo @lodging={{lodging}} @index={{index}} @onClick={{fn this.updateCampSelection index}} />
+            {{/each}}
+        {{/if}}   
+        {{#if this.showHotels}}
+            {{#each this.hotel_lodges as |lodging index|}}
+                <LodgingInfo @lodging={{lodging}} @index={{index}} @onClick={{fn this.updateHotelSelection index}} />
+            {{/each}}    
+        {{/if}}
+    </div>
+</div>

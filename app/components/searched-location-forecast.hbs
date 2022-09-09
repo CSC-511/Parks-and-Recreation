@@ -1,0 +1,41 @@
+{{yield}}
+<div local-class="weather-app">
+    <div class="output">
+
+        <h2>Weather at {{SearchedName}}</h2>
+        <h3>{{SearchedWeather}}</h3>
+        <b>Actual Temperature: {{rounding-helper this.SearchedTemp}}</b>
+        <br><b>Feels Like: </b> {{rounding-helper this.SearchedFeelsLike}}
+        <br>MAX: {{rounding-helper this.SearchedTempMax}} MIN:{{rounding-helper this.SearchedTempMin}}
+
+        {{this.updateWeather}}
+
+        <div local-class="container">
+        <table local-class="forecast-table">
+            <caption>Five Day Forecast</caption>
+            <tr>
+                <th>{{format-date this.searchedfirstDate}}</th>
+                <th>{{format-date this.searchedsecondDate}}</th>
+                <th>{{format-date this.searchedthirdDate}}</th>
+                <th>{{format-date this.searchedfourthDate}}</th>
+                <th>{{format-date this.searchedfifthDate}}</th>
+            </tr>
+            <tr local-class="temp">
+                <td>{{rounding-helper this.searchedfirstDayAvg}}</td>
+                <td>{{rounding-helper this.searchedsecondDayAvg}}</td>
+                <td>{{rounding-helper this.searchedthirdDayAvg}}</td>
+                <td>{{rounding-helper this.searchedfourthDayAvg}}</td>
+                <td>{{rounding-helper this.searchedfifthDayAvg}}</td>
+            </tr>
+            <tr local-class="condition">
+                <td>{{this.searchedfirstDayCond}}</td>
+                <td>{{this.searchedsecondDayCond}}</td>
+                <td>{{this.searchedthirdDayCond}}</td>
+                <td>{{this.searchedfourthDayCond}}</td>
+                <td>{{this.searchedfifthDayCond}}</td>
+            </tr>
+        </table>
+    
+    </div>
+    </div>
+</div>

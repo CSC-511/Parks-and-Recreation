@@ -1,0 +1,8 @@
+{{yield}}
+<div data-test='nearby-gallery'>
+  <div local-class='gallery-item'>
+    <img src={{this.currentParkImage}} alt={{this.currentParkName}} local-class='park-img'
+      onclick={{fn @selectPark this.currentIdx}} />
+    <span local-class='park-name'>{{this.currentParkName}}</span>
+  </div>
+</div>

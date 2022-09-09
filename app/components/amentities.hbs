@@ -1,0 +1,16 @@
+{{yield}}
+<div class="amentities">
+    {{#if this.data}}
+    <p>Amentities:</p>
+    {{/if}}
+    <ul>
+    {{#each this.data as |amentity index|}}
+    <li>
+    {{amentity}}
+    </li>
+    {{/each}}
+    </ul>
+
+
+    
+</div>

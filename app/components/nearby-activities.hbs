@@ -1,0 +1,19 @@
+{{yield}}
+<div local-class="activities-wrapper">
+    {{#each this.toBeRendered as |activity|}}
+    <a href={{activity.link}} target="_blank">
+        <div local-class="activity">
+            <div local-class="activity-img-wrapper" >
+                <img src={{activity.img}}>
+            </div>
+            <div local-class="activity-info">
+                <h4 local-class="activity-name">{{activity.name}}</h4>
+                {{!-- <p local-class="margin-0">{{activity.address}}</p>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination={{activity.address}}" target="_blank">Directions</a> --}}
+            </div>
+            <hr>
+        </div>
+        </a>
+    {{/each}}
+
+</div>

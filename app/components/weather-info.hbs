@@ -1,0 +1,40 @@
+{{yield}}
+<div local-class="weather-app">
+    <div class="output">
+
+        <h2>{{name}}</h2>
+        <h3>{{weather}}</h3>
+        <b>Actual Temperature: {{rounding-helper this.temperature}}</b>
+        <br><b>Feels Like: </b> {{rounding-helper this.feelsLike}}
+        <br>MAX: {{rounding-helper this.tempMax}} MIN:{{rounding-helper this.tempMin}}
+
+        {{this.updateWeather}}
+    </div>
+    <div local-class="container">
+        <table local-class="forecast-table">
+            <caption>Five Day Forecast</caption>
+            <tr>
+                <th>{{format-date this.firstDate}}</th>
+                <th>{{format-date this.secondDate}}</th>
+                <th>{{format-date this.thirdDate}}</th>
+                <th>{{format-date this.fourthDate}}</th>
+                <th>{{format-date this.fifthDate}}</th>
+            </tr>
+            <tr local-class="temp">
+                <td>{{rounding-helper this.firstDayAvg}}</td>
+                <td>{{rounding-helper this.secondDayAvg}}</td>
+                <td>{{rounding-helper this.thirdDayAvg}}</td>
+                <td>{{rounding-helper this.fourthDayAvg}}</td>
+                <td>{{rounding-helper this.fifthDayAvg}}</td>
+            </tr>
+            <tr local-class="condition">
+                <td>{{this.firstDayCond}}</td>
+                <td>{{this.secondDayCond}}</td>
+                <td>{{this.thirdDayCond}}</td>
+                <td>{{this.fourthDayCond}}</td>
+                <td>{{this.fifthDayCond}}</td>
+            </tr>
+        </table>
+    
+    </div>
+</div>

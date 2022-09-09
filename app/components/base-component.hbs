@@ -1,0 +1,33 @@
+{{yield}}
+
+{{!-- <LocationLookup /> --}}
+{{!-- <NearbyGallery /> --}}
+{{!-- <NearbyParks @latitude={{this.latitude}} @longitude={{this.longitude}} /> --}}
+{{!-- <Lodgings @latitude={{this.latitude}} @longitude={{this.longitude}} @location={{this.location}} @state={{this.state}}/> --}}
+{{!-- <NearbyLodgings @latitude={{this.latitude}} @longitude={{this.longitude}} @location={{this.location}} @state={{this.state}} /> --}}
+{{!-- <ThingsToDo @stateCode={{this.stateCode}} /> --}}
+
+{{#if (eq this.currentRoute this.homeRoute)}}
+<h1 class="title">Parks and Recreation</h1>
+<LocationLookup @onSubmitAddress={{this.onSubmitAddress}} @placeChanged={{this.placeChanged}} />
+
+{{#if this.showLayout}}
+<Layout @setShowParks={{this.setShowParks}} @setShowLodge={{this.setShowLodge}}/>
+{{/if}}
+
+{{else}}
+<div local-class="title-container">
+    <h1 class="title">Parks and Recreation</h1>
+    <button onclick={{this.goBack}}>Back</button>
+</div>
+{{/if}}
+
+<div style="margin-top: 60px;"></div>
+{{#if (eq this.currentRoute this.parksRoute)}}
+<NearbyParks @google={{this.google}} @latitude={{this.latitude}} @longitude={{this.longitude}} />
+{{/if}}
+
+
+{{#if (eq this.currentRoute this.lodgesRoute)}}
+<Lodgings @google={{this.google}} @latitude={{this.latitude}} @longitude={{this.longitude}} @location={{this.location}} @state={{this.state}}/>
+{{/if}}

@@ -1,0 +1,12 @@
+{{yield}}
+
+<div local-class="park-info" onclick={{@onClick}}>
+    <img local-class="park-image" src={{@park.image}} />
+    <div>
+        <h4 local-class="park-name">{{@park.name}}</h4>
+        <p local-class="park-vicinity">{{@park.vicinity}}</p>
+        <a href="https://www.google.com/maps/dir/?api=1&destination={{@park.vicinity}}" target="_blank">Directions</a>
+        <Amentities @name={{@park.name}} />
+    </div>
+</div>
+<hr local-class="divider" />

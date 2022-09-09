@@ -1,0 +1,40 @@
+.map_two {
+    width: 66.7%;
+}
+
+.nearby_lodgings {
+    background-color: #f6f6f6;
+    width: 33.3%;
+    position: relative;
+}
+
+.lodgings {
+    height: calc(100% - 55px);
+    width: 100%;
+    display: flex;
+    min-height: 350px;
+}
+
+.lodgings_icon {
+    height: 25px;
+    width: 25px;
+}
+
+.lodgings_image {
+    height: 300px;
+    width: 300px;
+}
+
+.lodgings_result {
+    text-align: left;
+    padding: 2px;
+    width: 100%;
+    height: auto;
+    background-color: lightblue;
+    border-width: 2px;
+    overflow: hidden;
+}
+
+.lodging_result:hover {
+    background-color: lightsteelblue;
+}

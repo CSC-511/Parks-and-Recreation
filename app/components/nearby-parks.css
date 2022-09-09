@@ -1,0 +1,37 @@
+.map {
+    width: 66.7%;
+}
+
+.nearby_parks {
+    background-color: #f6f6f6;
+    width: 33.3%;
+}
+
+.parks {
+    height: calc(100% - 55px);
+    width: 100%;
+    display: flex;
+}
+.parks_icon {
+    height: 25px;
+    width: 25px;
+}
+
+.parks_image {
+    height: 300px;
+    width: 300px;
+}
+
+.parks_result {
+    text-align: left;
+    padding: 2px;
+    width: 100%;
+    height: auto;
+    background-color: lightblue;
+    border-width: 2px;
+    overflow: hidden;
+}
+
+.parks_result:hover {
+    background-color: lightsteelblue;
+}

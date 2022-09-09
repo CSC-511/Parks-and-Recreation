@@ -1,0 +1,31 @@
+{{yield}}
+<div local-class="lodging-info" {{on "click" @onClick}}>
+    <img local-class="lodging-image" src={{@lodging.image}} />
+    <div>
+        <h4 local-class="lodging-name">{{@lodging.name}}</h4>
+        <p local-class="lodging-vicinity">{{@lodging.vicinity}}</p>
+        <a href="https://www.google.com/maps/dir/?api=1&destination={{@lodging.vicinity}}" target="_blank">Directions</a>
+        {{#if @lodging.campsites}}
+            {{#if this.total}}
+            <ul local-class="lodging-campsites">{{@lodging.campsites.totalSites}} campsites.
+                {{#if electricity}}
+                    <li>{{@lodging.campsites.electricalHookups}} provide electricity</li>
+                    {{/if}}
+                {{#if this.horse}} 
+                    <li>{{@lodging.campsites.horse}} allow horses.</li>
+                {{/if}}
+                {{#if this.rvOnly}} 
+                    <li>{{@lodging.campsites.rvOnly}} are for RVs only.</li>
+                {{/if}}
+                {{#if this.tentOnly}}
+                    <li>{{@lodging.campsites.tentOnly}} are tent only.</li>
+                {{/if}}             
+                {{#if this.boats}}
+                    <li>{{@lodging.campsites.walkBoatTo}} allow for boats.</li>
+                {{/if}}
+            </ul>
+            {{/if}}
+        {{/if}}
+    </div>
+</div>
+<hr local-class="divider" />

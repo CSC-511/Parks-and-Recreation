@@ -1,0 +1,53 @@
+{{yield}}
+{{!-- style="display: {{if @showParks "show" "none"}}" --}}
+
+<div>
+    <SearchedLocationForecast 
+    @searchedLon={{this.args.longitude}}
+    @searchedLat={{this.args.latitude}}
+    @googleSearch={{model.address}}
+    />
+</div>
+
+
+<div local-class="parks">
+    <div id="map" local-class="map"></div>
+    <div local-class="nearby_parks">
+        {{#if (eq this.parks.length 0)}}
+        <h3>There are no parks in this location</h3>
+        {{/if}}
+
+        {{#each this.parks as |park index|}}
+        <ParkInfo @park={{park}} @index={{index}} @onClick={{fn this.updateAllSelections index}} />
+        {{/each}}
+
+        {{#if this.parks.length }}
+        <NearbyGallery @parks={{this.parks}} @selectPark={{this.updateAllSelections}} />
+        {{/if}}
+
+        <div local-class="parks-result">
+            {{#if this.selected_place}}
+            <span>
+                <h4>{{this.selected_place}}
+                    <img src="{{this.selected_icon}}" alt="Icon for {{this.selected_place}}" local-class="parks_icon">
+                    <ShareToTwitterBtn @twitterContent={{this.twitterContent}} />
+                </h4>
+            </span>
+            <p>{{this.selected_vicinity}}</p>
+            <p>Distance from location: {{coords-to-distance this.args.latitude this.args.longitude
+                this.selected_latitude this.selected_longitude 'mi'}}</p>
+            <p>Rating: {{this.selected_rating}}</p>
+            <p>Total Reviews: {{this.selected_user_ratings}}</p>
+            <div>
+                <WeatherInfo 
+                @weatherlongitude={{this.selected_longitude}}
+                @weatherlatitude={{this.selected_latitude}}
+                />
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</div>
+<div local-class="activities">
+        <NearbyActivities/>
+</div>

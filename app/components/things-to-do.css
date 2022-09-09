@@ -1,0 +1,12 @@
+.thing-img {
+  width: 300px;
+}
+
+.list-container {
+  list-style: none;
+  display: flex;
+}
+
+.things-to-do-container {
+  display: flex;
+}

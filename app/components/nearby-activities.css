@@ -1,0 +1,28 @@
+.activities-wrapper {
+  display: flex;
+  flex-direction: row;
+  background-color: #f6f6f6;
+  justify-content: center;
+}
+.activity {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+.activity-img-wrapper img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.activity-img-wrapper {
+  margin: auto;
+}
+.activity-info {
+  padding: 14px;
+}
+.activity-name {
+  margin: 0;
+}
+.margin-0 {
+  margin: 0;
+}

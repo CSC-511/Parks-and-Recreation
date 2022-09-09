@@ -1,0 +1,15 @@
+{{yield}}
+<div local-class="backdrop"></div>
+<div local-class="modal">
+    {{!-- <div id="map" local-class="map"></div> --}}
+    <div local-class="infoContainer">
+        {{#if @place.photos}} 
+        <img local-class="image" src="https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sATtYBwKLGemf0DKYHlXy4zMuW5BdUSWjFFPqnWLY17YtPIq9cG8NdwbC3wNIDAbLsxJhkZcMGx5VGZE9xSRkdwpTS0Skl9v8JOE_17nEjUAx2apmT0U9fLKLoFUcURVkwzCMt4vC0FFPgYx0IUL-ZmP5L5udRpmhluYm85G2xRDao01Ck8lT&3u3264&5m1&2e1&callback=none&key=AIzaSyC8KJV3tzLJVXAZNlW0Xy1IyWNyWHdS3m8&token=48426" />
+        {{/if}}
+        <div>{{@place.name}}</div>
+        <a href="https://www.google.com/maps/dir/?api=1&destination={{@place.vicinity}}" target="_blank"
+            rel="nonreferrer">
+            Get Directions
+        </a>
+    </div>
+</div>

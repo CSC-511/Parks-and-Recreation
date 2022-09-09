@@ -1,0 +1,89 @@
+body{
+  background: url("./assets/Nyc Parks.jpeg");
+  background-repeat: repeat;
+  text-align: center;
+  font-family: 'Mukta', sans-serif;
+}
+
+p.address
+{
+  text-decoration: solid;
+}
+input
+{
+  padding: 8px;
+  width: 250px;
+}
+
+button 
+{
+  background-color: #68b168;
+  color: white;
+  padding: 10px 45px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  margin: 6px 5px;
+  border: 1px solid;
+  margin-left: 0;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  max-width: 900px;
+  padding: 30px;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.grid_text {
+  color: white;
+  font-size: 50px;
+  position: absolute;
+}
+
+.grid_item {
+  width: 100%;
+  height: 320px;
+  /* background: url("./central_park.jpeg"); */
+  transition: 0.5s;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.grid_item:hover {
+  transform: scale(1.05);
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 719px) {
+  .grid {
+    padding: 30px 90px;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    padding: 20px;
+  }
+}
