@@ -1,7 +1,12 @@
 # parks-and-recreation
 
 This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+
+Created a web-based application with a team that allows the user to find parks and activities that are near them.
+* Used CSS and HTML for the base layout of the site to display the Map and nearby parks
+* Used a Google API to get data to show the map and activities, as well as food spots
+* Utilized Ember.js which helped structure the design and made the application cleaner and more cohesive.
+
 
 ## Prerequisites
 
